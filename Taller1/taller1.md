@@ -17,7 +17,7 @@ Para esto definiremos la tabla como una relación de dominios que identifican un
 
 Un Ejemplo claro y conciso será una tabla empleados en donde relacione en la tabla los dominios de cedula y nombre de cada uno de las tuplas.
 
-![img_tabla](/media/tabla.png)
+![img_tabla](/Taller1/media/tabla.png)
 
 ### Tupla:
 
@@ -68,7 +68,7 @@ En cualquier momento dado no existen dos tuplas en R con el mismo valor K
 
 Si K es compuesto, no será posible eliminar ningun componente de K sin destruir la propiedad de unicidad.
 
-![clave_cand](/media/claves_candidatas.png)
+![clave_cand](/Taller1/media/claves_candidatas.png)
 
 ### Claves Primarias:
 
