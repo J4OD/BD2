@@ -1,0 +1,13 @@
+SELECT dept_name FROM instructor;
+SELECT DISTINCT dept_name FROM instructor;
+SELECT DISTINCT name FROM student;
+SELECT DISTINCT title FROM course;
+SELECT DISTINCT tot_cred FROM student ORDER BY tot_cred DESC;
+SELECT DISTINCT edad FROM student;
+SELECT budget AS presupuesto, budget*1.19 AS nuevo_presupuesto FROM department;
+SELECT dept_name AS departamento,budget AS presupuesto, budget*1.19 AS nuevo_presupuesto,budget*1.19-budget AS diferencia FROM department;
+SELECT name AS nombre, salary*0.034 AS salario FROM instructor WHERE name LIKE 'a%' OR name LIKE 'A%';
+UPDATE instructor SET salary = salary*1.034 WHERE name LIKE 'a%' OR name LIKE 'A%';
+SELECT ROUND((3450000 *1.03),2) as valor_sin_descuento, ROUND((3450000 *(1 + (edad  / 56)*0.03)),2) as valor_con_descuento FROM student;
+SELECT ROUND(AVG(edad),2) as promedio_edad FROM student;
+SELECT ROUND(AVG(salary),2) FROM instructor;
