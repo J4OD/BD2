@@ -27,3 +27,11 @@ WHERE course_id IN (
         WHERE name = 'lembr'
     )
 );
+
+    SELECT name 
+    FROM instructor
+    WHERE salary > SOME(
+    SELECT salary
+    FROM instructor
+    WHERE dept_name = 'Physics'
+    );
