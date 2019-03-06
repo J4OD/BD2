@@ -30,7 +30,7 @@ create table course
 	 dept_name		varchar(20),
 	 credits		numeric(2,0) check (credits > 0),
 	 primary key (course_id),
-	 foreign key (dept_name) references department(dept_name)
+	 foreign key (dept_name) references department
 		on delete set null
 	);
 
@@ -40,7 +40,7 @@ create table instructor
 	 dept_name		varchar(20), 
 	 salary			numeric(8,2) check (salary > 29000),
 	 primary key (id),
-	 foreign key (dept_name) references department(dept_name)
+	 foreign key (dept_name) references department
 		on delete set null
 	);
 
@@ -54,9 +54,9 @@ create table section
 	 room_number		varchar(7),
 	 time_slot_id		varchar(4),
 	 primary key (course_id, sec_id, semester, year),
-	 foreign key (course_id) references course(course_id)
+	 foreign key (course_id) references course
 		on delete cascade,
-	 foreign key (building, room_number) references classroom(building, room_number)
+	 foreign key (building, room_number) references classroom
 		on delete set null
 	);
 
@@ -67,9 +67,9 @@ create table teaches
 	 semester		varchar(6),
 	 year			numeric(4,0),
 	 primary key (id, course_id, sec_id, semester, year),
-	 foreign key (course_id,sec_id, semester, year) references section(course_id,sec_id, semester, year)
+	 foreign key (course_id,sec_id, semester, year) references section
 		on delete cascade,
-	 foreign key (id) references instructor(id)
+	 foreign key (id) references instructor
 		on delete cascade
 	);
 
@@ -79,7 +79,7 @@ create table student
 	 dept_name		varchar(20), 
 	 tot_cred		numeric(3,0) check (tot_cred >= 0),
 	 primary key (id),
-	 foreign key (dept_name) references department(dept_name)
+	 foreign key (dept_name) references department
 		on delete set null
 	);
 
@@ -91,9 +91,9 @@ create table takes
 	 year			numeric(4,0),
 	 grade		        varchar(2),
 	 primary key (id, course_id, sec_id, semester, year),
-	 foreign key (course_id,sec_id, semester, year) references section(course_id,sec_id, semester, year)
+	 foreign key (course_id,sec_id, semester, year) references section
 		on delete cascade,
-	 foreign key (id) references student(id)
+	 foreign key (id) references student
 		on delete cascade
 	);
 
@@ -121,8 +121,8 @@ create table prereq
 	(course_id		varchar(8), 
 	 prereq_id		varchar(8),
 	 primary key (course_id, prereq_id),
-	 foreign key (course_id) references course(course_id)
+	 foreign key (course_id) references course
 		on delete cascade,
-	 foreign key (prereq_id) references course(course_id)
+	 foreign key (prereq_id) references course
 	);
 
