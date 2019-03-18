@@ -11,7 +11,6 @@ import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -49,7 +48,7 @@ public class Department implements Serializable {
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Column(name = "budget")
     private BigDecimal budget;
-    @OneToMany(mappedBy = "deptName", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "deptName")
     private List<Instructor> instructorList;
 
     public Department() {

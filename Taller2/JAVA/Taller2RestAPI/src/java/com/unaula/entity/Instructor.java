@@ -10,7 +10,6 @@ import java.math.BigDecimal;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -51,7 +50,7 @@ public class Instructor implements Serializable {
     @Column(name = "salary")
     private BigDecimal salary;
     @JoinColumn(name = "dept_name", referencedColumnName = "dept_name")
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     private Department deptName;
 
     public Instructor() {
