@@ -9,7 +9,7 @@ namespace Taller2_CS
 {
     class DBConnection
     {
-        string connection = "Server=Localhost;5432;Username=postgres;password=;Database=taller2";
+        string connection = "Server=Localhost;Port=5432;Database=taller2;User Id=postgres;Password=admin";
         NpgsqlConnection conn;
 
         public NpgsqlConnection Connection()

@@ -9,7 +9,7 @@ namespace Taller2_CS
 {
     class Instructor
     {
-        DBConnection conn;
+        DBConnection conn = new DBConnection();
         NpgsqlCommand cmd;
 
         //INICIAR CRUD
