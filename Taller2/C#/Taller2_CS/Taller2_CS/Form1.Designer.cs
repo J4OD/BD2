@@ -32,24 +32,32 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.obtenerInstructoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearInstrutorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarInstructorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.lblId = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblDeptName = new System.Windows.Forms.Label();
+            this.lblSalary = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtDeptName = new System.Windows.Forms.TextBox();
+            this.txtSalary = new System.Windows.Forms.TextBox();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.dataSet1 = new System.Data.DataSet();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -80,11 +88,6 @@
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // obtenerInstructoresToolStripMenuItem
             // 
             this.obtenerInstructoresToolStripMenuItem.Name = "obtenerInstructoresToolStripMenuItem";
@@ -106,73 +109,78 @@
             this.actualizarInstructorToolStripMenuItem.Text = "Actualizar Instructor";
             this.actualizarInstructorToolStripMenuItem.Click += new System.EventHandler(this.actualizarInstructorToolStripMenuItem_Click);
             // 
-            // label1
+            // contextMenuStrip1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 16);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "id";
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // label2
+            // lblId
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(150, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 16);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "name";
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Location = new System.Drawing.Point(10, 35);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(21, 16);
+            this.lblId.TabIndex = 3;
+            this.lblId.Text = "Id";
             // 
-            // label3
+            // lblName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(408, 35);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "deptName";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(150, 35);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(57, 16);
+            this.lblName.TabIndex = 4;
+            this.lblName.Text = "Nombre";
             // 
-            // label4
+            // lblDeptName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(635, 35);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 16);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "salary";
+            this.lblDeptName.AutoSize = true;
+            this.lblDeptName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeptName.Location = new System.Drawing.Point(408, 35);
+            this.lblDeptName.Name = "lblDeptName";
+            this.lblDeptName.Size = new System.Drawing.Size(155, 16);
+            this.lblDeptName.TabIndex = 5;
+            this.lblDeptName.Text = "Nombre Departamento";
             // 
-            // textBox1
+            // lblSalary
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 7;
+            this.lblSalary.AutoSize = true;
+            this.lblSalary.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalary.Location = new System.Drawing.Point(635, 35);
+            this.lblSalary.Name = "lblSalary";
+            this.lblSalary.Size = new System.Drawing.Size(52, 16);
+            this.lblSalary.TabIndex = 6;
+            this.lblSalary.Text = "Salario";
             // 
-            // textBox2
+            // txtId
             // 
-            this.textBox2.Location = new System.Drawing.Point(153, 54);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(197, 20);
-            this.textBox2.TabIndex = 8;
+            this.txtId.Location = new System.Drawing.Point(12, 54);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 7;
             // 
-            // textBox3
+            // txtName
             // 
-            this.textBox3.Location = new System.Drawing.Point(411, 54);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(188, 20);
-            this.textBox3.TabIndex = 9;
+            this.txtName.Location = new System.Drawing.Point(153, 54);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(197, 20);
+            this.txtName.TabIndex = 8;
             // 
-            // textBox4
+            // txtDeptName
             // 
-            this.textBox4.Location = new System.Drawing.Point(638, 54);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(174, 20);
-            this.textBox4.TabIndex = 10;
+            this.txtDeptName.Location = new System.Drawing.Point(411, 54);
+            this.txtDeptName.Name = "txtDeptName";
+            this.txtDeptName.Size = new System.Drawing.Size(188, 20);
+            this.txtDeptName.TabIndex = 9;
+            // 
+            // txtSalary
+            // 
+            this.txtSalary.Location = new System.Drawing.Point(638, 54);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(174, 20);
+            this.txtSalary.TabIndex = 10;
             // 
             // btnCreate
             // 
@@ -184,6 +192,7 @@
             this.btnCreate.TabIndex = 11;
             this.btnCreate.Text = "Crear";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnUpdate
             // 
@@ -195,10 +204,27 @@
             this.btnUpdate.TabIndex = 12;
             this.btnUpdate.Text = "Actualizar";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // dataSet1
             // 
             this.dataSet1.DataSetName = "NewDataSet";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
+            // 
+            // errorProvider4
+            // 
+            this.errorProvider4.ContainerControl = this;
             // 
             // Form1
             // 
@@ -207,14 +233,14 @@
             this.ClientSize = new System.Drawing.Size(834, 512);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnCreate);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtSalary);
+            this.Controls.Add(this.txtDeptName);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.lblSalary);
+            this.Controls.Add(this.lblDeptName);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -224,6 +250,10 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,17 +268,21 @@
         private System.Windows.Forms.ToolStripMenuItem crearInstrutorToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem actualizarInstructorToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblDeptName;
+        private System.Windows.Forms.Label lblSalary;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtDeptName;
+        private System.Windows.Forms.TextBox txtSalary;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnUpdate;
         private System.Data.DataSet dataSet1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.ErrorProvider errorProvider4;
     }
 }
 

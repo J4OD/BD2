@@ -18,7 +18,7 @@ namespace Taller2_CS
 
         public NpgsqlDataReader GetInstructor()
         {
-            string sql = "SELECT * FROM instrucutor";
+            string sql = "SELECT id,name as nombre,dept_name as NombreDepartamento, salary as Salario FROM instructor ORDER BY name";
             cmd = new NpgsqlCommand(sql, conn.Connection());
             NpgsqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
@@ -29,7 +29,7 @@ namespace Taller2_CS
         }
         public NpgsqlDataReader GetInstructorByID(string id)
         {
-            string sql = String.Format("SELECT * FROM instrucutor WHERE id ={0};",id);
+            string sql = String.Format("SELECT id,name as nombre,dept_name as NombreDepartamento, salary as Salario FROM instructor WHERE id ={0};", id);
             cmd = new NpgsqlCommand(sql, conn.Connection());
             NpgsqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
@@ -40,7 +40,7 @@ namespace Taller2_CS
         }
         public NpgsqlDataReader GetInstructorByName(string name)
         {
-            string sql = String.Format("SELECT * FROM instrucutor WHERE name ={0};", name);
+            string sql = String.Format("SELECT id,name as nombre,dept_name as NombreDepartamento, salary as Salario FROM instructor WHERE name ={0};", name);
             cmd = new NpgsqlCommand(sql, conn.Connection());
             NpgsqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
@@ -51,7 +51,7 @@ namespace Taller2_CS
         }
         public NpgsqlDataReader GetInstructorByDeptName(string deptName)
         {
-            string sql = String.Format("SELECT * FROM instrucutor WHERE dept_name ={0};", deptName);
+            string sql = String.Format("SELECT id,name as nombre,dept_name as NombreDepartamento, salary as Salario FROM instructor WHERE dept_name ={0};", deptName);
             cmd = new NpgsqlCommand(sql, conn.Connection());
             NpgsqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
@@ -60,9 +60,9 @@ namespace Taller2_CS
             }
             return null;
         }
-        public NpgsqlDataReader GetInstructorByID(double salary)
+        public NpgsqlDataReader GetInstructorBySalary(double salary)
         {
-            string sql = String.Format("SELECT * FROM instrucutor WHERE salary ={0};", salary);
+            string sql = String.Format("SELECT id,name as nombre,dept_name as NombreDepartamento, salary as Salario FROM instructor WHERE salary ={0};", salary);
             cmd = new NpgsqlCommand(sql, conn.Connection());
             NpgsqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
