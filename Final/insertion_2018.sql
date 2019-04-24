@@ -772,7 +772,7 @@ INSERT INTO game VALUES ('RFDX1',null,null,null,null,null,null,null,null,null,nu
 /* INSERTAR Jurado */
 -- Tomado de https://es.wikipedia.org/wiki/Anexo:%C3%81rbitros_de_tenis
 INSERT INTO jurado VALUES ('Adel noir','Egipto',2);
-INSERT INTO jurado VALUES ('Ali Nili','EE.UU',0);
+INSERT INTO jurado VALUES ('Ali Nili','USA',0);
 INSERT INTO jurado VALUES ('Arnaud Gabas','Francia',1);
 INSERT INTO jurado VALUES ('Carlos Bernabes','Brasil',2);
 INSERT INTO jurado VALUES ('Carlos Ramos','Portugal',2);
@@ -783,8 +783,8 @@ INSERT INTO jurado VALUES ('Emmanuel Joseph','Francia',1);
 INSERT INTO jurado VALUES ('Felix Torralba','España',2);
 INSERT INTO jurado VALUES ('Fergus Murphy','Irlanda',2);
 INSERT INTO jurado VALUES ('Gianluca Moscarella','Italia',2);
-INSERT INTO jurado VALUES ('Greg Allensworth','EE.UU',2);
-INSERT INTO jurado VALUES ('Jake Garner','EE.UU',3);
+INSERT INTO jurado VALUES ('Greg Allensworth','USA',2);
+INSERT INTO jurado VALUES ('Jake Garner','USA',3);
 INSERT INTO jurado VALUES ('James Keothavong','Gran Bretaña',3);
 INSERT INTO jurado VALUES ('John Blom','Australia',1);
 INSERT INTO jurado VALUES ('Kader Nouni','Francia',2);
@@ -796,7 +796,7 @@ INSERT INTO jurado VALUES ('Pierre Bacchi','Francia',3);
 INSERT INTO jurado VALUES ('Renaud Lichtenstein','Francia',1);
 INSERT INTO jurado VALUES ('Richard Haigh','Gran Bretaña',2);
 INSERT INTO jurado VALUES ('Roland Herfel','Alemania',2);
-INSERT INTO jurado VALUES ('Tony Nimmons','EE.UU',2);
+INSERT INTO jurado VALUES ('Tony Nimmons','USA',2);
 INSERT INTO jurado VALUES ('Alison Hughes (née Lang)','Gran Bretaña',2);
 INSERT INTO jurado VALUES ('Eva Asderaki-Moore','Grecia',3);
 INSERT INTO jurado VALUES ('Juan (Jennifer) Zhang','China',3);
@@ -808,3 +808,26 @@ INSERT INTO jurado VALUES ('Julie Kjendlie','Noruega',2);
 INSERT INTO jurado VALUES ('Paula Vieira Souza','Brasil',3);
 INSERT INTO jurado VALUES ('Tamara Vrhovec-Wojcik','Croacia',3);
 
+/* Jugadores 2018 */
+
+INSERT INTO jugador VALUES('Taro Daniel',71,'M','Tokio,Japón','NY,USA',2010,26,80,191,'D',2,0);
+INSERT INTO jugador VALUES('Victor Estrella Burgos',362,'M','Santiago,República Dominicana','Santiago,República Dominicana',2002,38,77,170,'D',1,0);
+INSERT INTO jugador VALUES('Ilya Ivashka',117,'M','Minsk,Belarus','Minsk,Belarus',2013,25,84,193,'D',2,0);
+INSERT INTO jugador VALUES('Joao Domingues',214,'M','Porto,Portugal','Oliveira De Azemeis,Portugal',2013,25,70,null,'D',2,0);
+INSERT INTO jugador VALUES('Ruben Bemelmans',166,'M','Maasmechelen,Bélgica','Genk,Bélgica',2006,31,75,183,'Z',2,0);
+INSERT INTO jugador VALUES('Ugo Humbert',65,'M',null,'Metz,Francia',2016,20,72,188,'Z',2,0);
+INSERT INTO jugador VALUES('Alessandro Giannessi',167,'La Spezia,Italia','La Spezia,Italia',2008,28,82,185,'Z',2,0);
+INSERT INTO jugador VALUES('Gerald Melzer',287,'Viena,Austria','Viena,Austria',2007,28,80,188,'Z',2,0);
+INSERT INTO jugador VALUES('Casper Ruud',69,'Oslo,Noruega','Oslo,Noruega',2015,20,77,183,'D',2,0);
+INSERT INTO jugador VALUES('Thiago Monteiro',112,'Río De Janeiro,Brasil','Fortaleza,Brasil',2011,24,78,183,'Z',2,0);
+INSERT INTO jugador VALUES('Rogerio Dutra Silva',163,'Santa Barbara D`Oeste,Brasil','Santa Barbara D`Oeste,Brasil',2003,35,73,178,'D',1,0);
+INSERT INTO jugador VALUES('Christian Garín',48,'Santiago,Chile','Santiago,Chile',2011,22,85,185,'D',2,0);
+INSERT INTO jugador VALUES('Denis Kudla',82,'Arlington,Virginia,USA','Kiev,Ucrania',2010,26,79,180,'D',2,0);
+INSERT INTO jugador VALUES('Guilherme Clezar',256,'Porto Alegre,Brasil','Porto Alegre,Brasil',2009,26,79,183,'D',2,0);
+INSERT INTO jugador VALUES('Santiago Giraldo',202,'Pereira,Colombia','Pereira,Colombia',2004,31,75,188,'D',2,0);
+INSERT INTO jugador VALUES('Adrian Menendez Maceiras',124,'Marbella,España','Marbella,España',2005,33,75,183,'D',2,0);
+INSERT INTO jugador VALUES('Guido Andreozzi',97,'Buenos Aires,Argentina','Buenos Aires,Argentina',2010,27,78,183,'D',2,0);
+INSERT INTO jugador VALUES('Dustin Brown',173,'Winsen,Alemania','Celle,Alemania',2002,34,78,196,'D',2,0);
+INSERT INTO jugador VALUES('',,'','',,,,,'',,0);
+INSERT INTO jugador VALUES('',,'','',,,,,'',,0);
+INSERT INTO jugador VALUES('',,'','',,,,,'',,0);

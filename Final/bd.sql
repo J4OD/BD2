@@ -8,9 +8,10 @@ CREATE TABLE jugador(
     sexo                VARCHAR(1) NOT NULL,
     lugar_residencia    VARCHAR(250),
     lugar_nacimiento    VARCHAR(250),
+    prof_desde          INTEGER,
     edad                INTEGER,
-    peso                REAL,
-    estatua             REAL,
+    peso                REAL,  -- Kg
+    altura              REAL,  -- cm
     tipo_mano           VARCHAR(1),
     tipo_reves          NUMERIC(1),
     premio              REAL,
@@ -76,11 +77,11 @@ CREATE TABLE game(
     set3        VARCHAR(2),
     set4        VARCHAR(2),
     set5        VARCHAR(2),
-    des1        VARCHAR(25),
-    des2        VARCHAR(25),
-    des3        VARCHAR(25),
-    des4        VARCHAR(25),
-    des5        VARCHAR(25),
+    tb1        VARCHAR(25),
+    tb2        VARCHAR(25),
+    tb3        VARCHAR(25),
+    tb4        VARCHAR(25),
+    tb5        VARCHAR(25),
     duracion    TIME,
 
     FOREIGN KEY (id_partido) REFERENCES partido(id)
