@@ -39,8 +39,8 @@ tipo_juez : 0 -> Juez de jueces
 CREATE TABLE jurado(
     id              SERIAL PRIMARY KEY NOT NULL,
     nombre          VARCHAR(250) NOT NULL,
-    pais            VARCHAR(50)
-    tipo_juez       NUMERIC(1) NOT NULL,
+    pais            VARCHAR(50),
+    tipo_juez       NUMERIC(1) NOT NULL
 );
 CREATE TABLE estadistica_partido(
     id_jugador          SERIAL NOT NULL,

@@ -1,0 +1,7 @@
+{
+  "name": "Ionic4GM",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
