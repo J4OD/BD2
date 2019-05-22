@@ -74,6 +74,7 @@
             "platform": "serve",
             "cwd": "${workspaceFolder}",
             "devServerAddress": "localhost",
+            "target": "chrome",
             "sourceMaps": true,
             "ionicLiveReload": true
         },
